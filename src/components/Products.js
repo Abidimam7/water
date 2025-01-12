@@ -1,64 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Products = () => {
+  const [products, setProducts] = useState([]);  // To store the fetched products
+  const [loading, setLoading] = useState(true);  // To handle the loading state
+  const [error, setError] = useState(null);      // To handle any errors
+
+  // Fetch products when the component mounts
+  useEffect(() => {
+    axios.get('http://localhost:8000/cms/api/products/')
+      .then((response) => {
+        setProducts(response.data);
+        setLoading(false);  // Set loading to false once data is fetched
+      })
+      .catch((error) => {
+        setError(error.message);
+        setLoading(false);
+      });
+  }, []);  // Empty dependency array to run only once when the component mounts
+
+  // Loading state
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  // Error state
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <div className="container mt-5">
       <h2>Our Products</h2>
       <div className="row">
-        <div className="col-md-4">
-          <div className="card">
-            <img src="kingfisher.jpg" className="card-img-top" alt="Kingfisher Water" />
-            <div className="card-body">
-              <h5 className="card-title">Kingfisher Packaged Drinking Water</h5>
-              <p className="card-text">Pure and safe drinking water.</p>
+        {products.map((product) => (
+          <div key={product.id} className="col-md-4">
+            <div className="card">
+              <img
+                src={product.image}
+                className="card-img-top"
+                alt={product.name}
+              />
+              <div className="card-body">
+                <h5 className="card-title">{product.name}</h5>
+                <p className="card-text">{product.description}</p>
+                <p className="card-text">Price: ${product.price}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <img src="packaged.jpg" className="card-img-top" alt="Mineral Water" />
-            <div className="card-body">
-              <h5 className="card-title">Natural Mineral Water</h5>
-              <p className="card-text">Bottled from pristine sources.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <img src="soda.jpg" className="card-img-top" alt="Jeera Soda" />
-            <div className="card-body">
-              <h5 className="card-title">Soda (Jeera Soda)</h5>
-              <p className="card-text">A tangy, refreshing drink.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <img src="soda.jpg" className="card-img-top" alt="Jeera Soda" />
-            <div className="card-body">
-              <h5 className="card-title">Soda (Jeera Soda)</h5>
-              <p className="card-text">A tangy, refreshing drink.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <img src="soda.jpg" className="card-img-top" alt="Jeera Soda" />
-            <div className="card-body">
-              <h5 className="card-title">Soda (Jeera Soda)</h5>
-              <p className="card-text">A tangy, refreshing drink.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <img src="soda.jpg" className="card-img-top" alt="Jeera Soda" />
-            <div className="card-body">
-              <h5 className="card-title">Soda (Jeera Soda)</h5>
-              <p className="card-text">A tangy, refreshing drink.</p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
