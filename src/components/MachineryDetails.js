@@ -15,12 +15,12 @@ const MachineryDetails = () => {
         <div className="col-md-8">
           <h2 className="text-primary">About Our Founder</h2>
           <p className="text-muted">
-            Our founder, [Name], is a visionary leader with a passion for excellence and innovation. With years of experience in the industry,
+            Our founder, Farhat Hussain, is a visionary leader with a passion for excellence and innovation. With years of experience in the industry,
             [Name] has been instrumental in shaping the values and vision of Clean Water & Allied Products Pvt. Ltd.
           </p>
           <p className="text-muted">
-            Under [Name]'s guidance, the company has achieved remarkable milestones, including the launch of premium products like Kingfisher Packaged Drinking Water
-            and Natural Mineral Water. [Name]'s dedication to quality, safety, and customer satisfaction has been the driving force behind our success.
+            Under Farhat's guidance, the company has achieved remarkable milestones, including the launch of premium products like Kingfisher Packaged Drinking Water
+            and Natural Mineral Water. Farhat's dedication to quality, safety, and customer satisfaction has been the driving force behind our success.
           </p>
         </div>
       </div>
