@@ -19,15 +19,12 @@ const AnimatedBanner = () => {
       <Slider {...settings}>
         <div>
           <img src="banner1.jpg" alt="Banner 1" className="img-fluid w-100" />
-          <h2 className="text-overlay">Welcome to Clean Water & Allied Products</h2>
         </div>
         <div>
           <img src="banner2.jpg" alt="Banner 2" className="img-fluid w-100" />
-          <h2 className="text-overlay">Delivering High-Quality Packaged Water</h2>
         </div>
         <div>
           <img src="banner3.jpg" alt="Banner 3" className="img-fluid w-100" />
-          <h2 className="text-overlay">Pure, Safe, and Refreshing</h2>
         </div>
       </Slider>
     </div>
