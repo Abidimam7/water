@@ -45,7 +45,7 @@ const Home = () => {
       <AnimatedBanner />
       
       {/* Products Section */}
-      <div style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', padding: '50px 0' }}>
+      <div style={{ backgroundColor: '#187bb4' }}>
         <h2 className="text-center text-primary mb-4">Our Products</h2>
         <div className="row justify-content-center">
           {/* Render Static Products first */}
@@ -78,7 +78,7 @@ const Home = () => {
                   alt={product.name || `Sample Product ${index + 1}`}
                   className="card-img-top"
                   style={{
-                    height: '300px',
+                    height: '200px',
                     objectFit: 'contain', 
                   }}
                 />

@@ -11,9 +11,9 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div className="container">
+    <header >
+      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#187bb4' }}>
+        <div className="container" >
           {/* Brand Name */}
           <button
             className="btn btn-link navbar-brand text-white"
