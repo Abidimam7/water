@@ -48,8 +48,10 @@ const About = () => {
 
         {/* Overview Section */}
         <div className="mb-5">
-          <h3 className="text-primary">Overview</h3>
-          <p className="text-muted">
+          <h3 className="text-center text-primary font-weight-bold" style={{ fontSize: '2.5rem' }}>
+            Overview
+          </h3>
+          <p className="text-center text-muted" style={{ fontSize: '1.1rem' }}>
             Clean Water & Allied Products Pvt. Ltd. is a leading manufacturer of Packaged Drinking Water, Natural Mineral
             Water, and flavored soft drinks in India. Our company is committed to providing high-quality products that
             meet the evolving needs of our customers.
@@ -58,8 +60,10 @@ const About = () => {
 
         {/* Products Section */}
         <div className="mb-5">
-          <h3 className="text-primary">Our Products</h3>
-          <p className="text-muted">
+          <h3 className="text-center text-primary font-weight-bold" style={{ fontSize: '2.5rem'}}>
+            Our Products
+          </h3>
+          <p className="text-center text-muted" style={{ fontSize: '1.1rem' }}>
             Our flagship brand, <strong>Kingfisher Packaged Drinking Water</strong>, is a popular choice among consumers
             seeking pure and safe drinking water. We also offer <strong>Natural Mineral Water</strong>, sourced from
             pristine locations and bottled with care to preserve its natural goodness. Additionally, our <strong>Jeera
@@ -69,8 +73,10 @@ const About = () => {
 
         {/* Mission Section */}
         <div className="mb-5">
-          <h3 className="text-primary">Our Mission</h3>
-          <p className="text-muted">
+          <h3 className="text-center text-primary font-weight-bold" style={{ fontSize: '2.5rem' }}>
+            Our Mission
+          </h3>
+          <p className="text-center text-muted" style={{ fontSize: '1.1rem' }}>
             At Clean Water & Allied Products Pvt. Ltd., our mission is to provide high-quality products that exceed our
             customers' expectations. We strive to maintain the highest standards of quality, safety, and customer
             satisfaction in everything we do.
@@ -79,8 +85,10 @@ const About = () => {
 
         {/* Values Section */}
         <div className="mb-5">
-          <h3 className="text-primary">Our Values</h3>
-          <p className="text-muted">
+          <h3 className="text-center text-primary font-weight-bold" style={{ fontSize: '2.5rem' }}>
+            Our Values
+          </h3>
+          <p className="text-center text-muted" style={{ fontSize: '1.1rem' }}>
             At Clean Water & Allied Products, we uphold core values that guide our operations. <strong>Quality</strong> is our
             top priority, as we strive to deliver products that meet the evolving needs of our customers. We emphasize{' '}
             <strong>Safety</strong> by adhering to the highest standards of purity and excellence. Our focus on{' '}
@@ -91,14 +99,17 @@ const About = () => {
 
         {/* Certifications Section */}
         <div className="mb-5">
-          <h3 className="text-primary">Our Certifications</h3>
-          <p className="text-muted">
+          <h3 className="text-center text-primary font-weight-bold" style={{ fontSize: '2.5rem' }}>
+            Our Certifications
+          </h3>
+          <p className="text-center text-muted" style={{ fontSize: '1.1rem' }}>
             We are proud to hold certifications that demonstrate our commitment to quality and safety. Our <strong>BIS</strong>{' '}
             certification (ISO 14543:2024) recognizes our adherence to the highest standards of food safety management.
             Additionally, our <strong>FSSAI</strong> certification highlights our dedication to maintaining superior food safety
             and regulatory compliance.
           </p>
         </div>
+
       </div>
     </div>
   );
