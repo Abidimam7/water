@@ -62,9 +62,9 @@ const Header = () => {
               <li className="nav-item">
                 <button
                   className="btn btn-link nav-link text-white"
-                  onClick={() => scrollToSection('machinery')}
+                  onClick={() => scrollToSection('Founder')}
                 >
-                  Machinery
+                  Our Founder
                 </button>
               </li>
               <li className="nav-item">

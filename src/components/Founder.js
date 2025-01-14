@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MachineryDetails = () => {
+const Founder = () => {
   return (
     <div className="container mt-5 py-5" style={{ backgroundColor: '#f9f9f9', borderRadius: '10px' }}>
       <div className="row align-items-center">
@@ -16,7 +16,7 @@ const MachineryDetails = () => {
           <h2 className="text-primary">About Our Founder</h2>
           <p className="text-muted">
             Our founder, Farhat Hussain, is a visionary leader with a passion for excellence and innovation. With years of experience in the industry,
-            [Name] has been instrumental in shaping the values and vision of Clean Water & Allied Products Pvt. Ltd.
+            Farhat has been instrumental in shaping the values and vision of Clean Water & Allied Products Pvt. Ltd.
           </p>
           <p className="text-muted">
             Under Farhat's guidance, the company has achieved remarkable milestones, including the launch of premium products like Kingfisher Packaged Drinking Water
@@ -28,4 +28,4 @@ const MachineryDetails = () => {
   );
 };
 
-export default MachineryDetails;
+export default Founder;

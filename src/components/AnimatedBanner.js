@@ -18,13 +18,13 @@ const AnimatedBanner = () => {
     <div className="animated-banner">
       <Slider {...settings}>
         <div>
-          <img src="banner1.jpg" alt="Banner 1" className="img-fluid w-100" />
+          <img src="banner5.jpg" alt="Banner 1" className="img-fluid w-100" />
         </div>
         <div>
-          <img src="banner2.jpg" alt="Banner 2" className="img-fluid w-100" />
+          <img src="banner6.jpg" alt="Banner 2" className="img-fluid w-100" />
         </div>
         <div>
-          <img src="banner3.jpg" alt="Banner 3" className="img-fluid w-100" />
+          <img src="banner7.jpg" alt="Banner 3" className="img-fluid w-100" />
         </div>
       </Slider>
     </div>

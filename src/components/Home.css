@@ -1,75 +1,83 @@
 #products {
-    background-color: #f8f9fa;  /* Light gray background */
-    padding: 40px 0;  /* Add padding to the section */
-  }
-  
-  #products h2 {
-    font-family: 'Arial', sans-serif;
-    font-weight: 700;
-    color: #333;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
-  
+  background-color: #f8f9fa;  /* Light gray background */
+  padding: 40px 0;  /* Add padding to the section */
+}
+
+#products h2 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;  /* Add some space between product cards */
+}
+
+.product-card:hover {
+  transform: translateY(-10px);  /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.price {
+  font-size: 1.1rem;
+  color: #28a745;  /* Green color for the price */
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card img {
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* On mobile devices (screens smaller than 768px), show two products side by side */
   .product-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex: 0 0 48%;  /* Each product will take 48% of the row width */
   }
-  
-  .product-card:hover {
-    transform: translateY(-10px);  /* Slight lift effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .card-text {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .price {
-    font-size: 1.1rem;
-    color: #28a745;  /* Green color for the price */
-  }
-  
-  .btn-outline-primary {
-    border-color: #007bff;
-    color: #007bff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-outline-primary:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-  
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .product-card img {
-    max-height: 200px;
-    object-fit: cover;
-  }
-  
+}
