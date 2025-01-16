@@ -43,22 +43,36 @@ const Home = () => {
     <div>
       {/* Animated Banner */}
       <AnimatedBanner />
-      
+
+      {/* Welcome Section */}
+      <div style={{ backgroundColor: '#f8f9fa', padding: '40px 20px', textAlign: 'center' }}>
+        <h1 className="text-primary">Welcome to Clean Water & Allied Products Pvt. Ltd.</h1>
+        <p style={{ fontSize: '1.2rem', color: '#555' }}>
+          Delivering Purity, Innovation, and Excellence in Every Drop
+        </p>
+        <p style={{ fontSize: '1rem', color: '#777', marginTop: '20px' }}>
+          Nestled in the serene landscapes of Nalagarh, Himachal Pradesh, Clean Water & Allied Products Pvt. Ltd. 
+          is a trusted leader in manufacturing packaged drinking water, natural mineral water, and flavored soft drinks. 
+          With a steadfast commitment to quality, safety, and sustainability, we ensure that every product we deliver meets 
+          the highest standards of excellence.
+        </p>
+      </div>
+
       {/* Products Section */}
-      <div style={{ backgroundColor: '#187bb4' }}>
-        <h2 className="text-center text-primary mb-4">Our Products</h2>
+      <div style={{ backgroundColor: '#187bb4', padding: '40px 20px' }}>
+        <h2 className="text-center text-white">Our Products</h2>
         <div className="row justify-content-center">
           {/* Render Static Products first */}
           {staticProducts.map((product, index) => (
             <div key={index} className="product-card col-lg-4 col-md-6 col-sm-12 mb-4">
               <div className="card shadow-sm rounded">
                 <img
-                  src={product.image}  // Static image from public folder
+                  src={product.image} // Static image from public folder
                   alt={product.name}
                   className="card-img-top"
                   style={{
                     height: '300px',
-                    objectFit: 'contain', 
+                    objectFit: 'contain',
                   }}
                 />
                 <div className="card-body text-center">
@@ -68,18 +82,18 @@ const Home = () => {
               </div>
             </div>
           ))}
-          
+
           {/* Render Dynamic Products from the API */}
           {(showAllProducts ? products : products.slice(0, 3)).map((product, index) => (
             <div key={product.id || index} className="product-card col-lg-4 col-md-6 col-sm-12 mb-4">
               <div className="card shadow-sm rounded">
                 <img
-                  src={product.image_url || '/default-image.jpg'}  // Fallback to default if image is missing
+                  src={product.image_url || '/default-image.jpg'} // Fallback to default if image is missing
                   alt={product.name || `Sample Product ${index + 1}`}
                   className="card-img-top"
                   style={{
-                    height: '200px',
-                    objectFit: 'contain', 
+                    height: '300px',
+                    objectFit: 'contain',
                   }}
                 />
                 <div className="card-body text-center">
@@ -90,9 +104,9 @@ const Home = () => {
             </div>
           ))}
         </div>
-        
-        {/* Show "See More" button if there are more than 4 products */}
-        {!showAllProducts && products.length > 4 && (
+
+        {/* Show "See More" button if there are more than 3 products */}
+        {!showAllProducts && products.length > 3 && (
           <div className="text-center mt-3">
             <button className="btn btn-primary" onClick={handleSeeMore}>
               See More
@@ -100,9 +114,9 @@ const Home = () => {
           </div>
         )}
       </div>
-      
+
       {/* About Section */}
-      <div id="about" className="my-5 py-5" style={{ backgroundColor: '#fdf5e6' }}>
+      <div id="about" className="my-5 py-5" style={{ backgroundColor: '#187bb4' }}>
         <About />
       </div>
 
