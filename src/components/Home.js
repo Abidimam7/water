@@ -12,7 +12,7 @@ const Home = () => {
 
   // Static products with images in the public folder
   const staticProducts = [
-    { name: 'KINGFISHER PREMIUM', image: '/01.jpg', description: 'Packaged Drinking Water' },
+    { name: 'Kingfisher Premium', image: '/01.jpg', description: 'Packaged Drinking Water' },
     { name: 'Kingfisher Strong Soda', image: '/02.jpg', description: 'Kingfisher Strong Soda' },
     { name: 'Kingfisher Ultra Soda', image: '/03.jpg', description: 'Kingfisher Ultra Soda' },
     { name: 'Zero Degree ', image: '/04.jpg', description: 'Packaged Drinking Water' },
@@ -134,3 +134,4 @@ const Home = () => {
 };
 
 export default Home;
+

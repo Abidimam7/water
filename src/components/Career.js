@@ -12,6 +12,7 @@ const Career = () => {
   });
 
   const [selectedPosition, setSelectedPosition] = useState('');
+  const [selectedJobTitle, setSelectedJobTitle] = useState('');  // New state for job title
   const [jobVacancies, setJobVacancies] = useState([]);
 
   // Fetch job vacancies from the backend when the component mounts
@@ -42,47 +43,44 @@ const Career = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        // Ensure all form data fields are correctly added
-        const formDataToSubmit = new FormData();
-        formDataToSubmit.append('name', formData.name);
-        formDataToSubmit.append('email', formData.email);
-        formDataToSubmit.append('phone', formData.phone);
-        formDataToSubmit.append('position', selectedPosition); // Use the selectedPosition (ID)
-        formDataToSubmit.append('resume', formData.resume);
-        formDataToSubmit.append('message', formData.message);
+      // Ensure all form data fields are correctly added
+      const formDataToSubmit = new FormData();
+      formDataToSubmit.append('name', formData.name);
+      formDataToSubmit.append('email', formData.email);
+      formDataToSubmit.append('phone', formData.phone);
+      formDataToSubmit.append('position', selectedPosition); // Use the selectedPosition (ID)
+      formDataToSubmit.append('resume', formData.resume);
+      formDataToSubmit.append('message', formData.message);
 
-        // Log the FormData for debugging
-        console.log("Submitting FormData:", [...formDataToSubmit.entries()]);
+      // Log the FormData for debugging
+      console.log("Submitting FormData:", [...formDataToSubmit.entries()]);
 
-        const response = await axios.post('http://localhost:8000/cms/api/career-applications/', formDataToSubmit, {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            },
-        });
-        console.log("Application submitted successfully:", response.data);
-        
-        // Set isSubmitted to true after successful submission
-        setIsSubmitted(true);
+      const response = await axios.post('http://localhost:8000/cms/api/career-applications/', formDataToSubmit, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      console.log("Application submitted successfully:", response.data);
+      
+      // Set isSubmitted to true after successful submission
+      setIsSubmitted(true);
     } catch (error) {
-        console.error("Error submitting application:", error.response?.data || error.message);
-        alert("Failed to submit the application. Please try again.");
+      console.error("Error submitting application:", error.response?.data || error.message);
+      alert("Failed to submit the application. Please try again.");
     }
   };
 
-  const handlePositionSelect = (positionId) => {
-    setSelectedPosition(positionId); // Store position ID, not title
+  const handlePositionSelect = (positionId, positionTitle) => {
+    setSelectedPosition(positionId); // Store position ID
+    setSelectedJobTitle(positionTitle); // Store position title
     setFormData({ ...formData, position: positionId }); // Update formData for submission
   };
 
   return (
     <div className="container mt-5">
-      {/* New Content Section */}
-      <div className="text-center mb-4">
-        <h2>Join Us in Creating a Healthier Tomorrow</h2>
-        <p>
-          Whether it’s packaged drinking water, mineral water, or flavored sodas, Clean Water & Allied Products Pvt. Ltd. is your trusted partner for purity, taste, and innovation. Let’s stay refreshed, healthy, and sustainable together.
-        </p>
-      </div>
+      <h2 className="mb-4">Join Our Team</h2>
+      <p className="mb-4">We are always looking for talented individuals. Select a position below and apply!</p>
+
       {/* Show Thank You Message if the application was submitted */}
       {isSubmitted ? (
         <div className="alert alert-success" role="alert">
@@ -98,7 +96,7 @@ const Career = () => {
                 <div key={vacancy.id} className="col-md-4">
                   <div
                     className="card"
-                    onClick={() => handlePositionSelect(vacancy.id)} // Pass ID instead of title
+                    onClick={() => handlePositionSelect(vacancy.id, vacancy.title)} // Pass both ID and title
                   >
                     <div className="card-body">
                       <h5 className="card-title">{vacancy.title}</h5>
@@ -115,7 +113,7 @@ const Career = () => {
           {/* Form to Apply for Selected Position */}
           {selectedPosition && (
             <div>
-              <h4 className="mt-4">Apply for Position {selectedPosition}</h4>
+              <h4 className="mt-4">Apply for Position {selectedJobTitle}</h4> {/* Show the job title here */}
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">Name</label>

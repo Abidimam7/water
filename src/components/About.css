@@ -1,0 +1,74 @@
+/* Product Range Section Styling */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of product items */
+    gap: 30px; /* Increased space between product items */
+    justify-content: center; /* Align items to the center */
+  }
+  
+  .product-item {
+    display: flex;
+    flex-direction: row; /* Align image and text side by side */
+    align-items: center;
+    gap: 30px; /* Increased gap between image and text */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow: hidden;
+    padding: 20px; /* Add more padding for spacing */
+    width: 45%; /* Increased width for larger box */
+  }
+  
+  .product-image {
+    width: 20%; /* Increase image width to take up more space */
+    height: auto; /* Let the image adjust the height according to the width */
+    object-fit: cover; /* Ensures the image fills its container while maintaining aspect ratio */
+    border-radius: 8px;
+  }
+  
+  .product-text {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    color: #555555;
+    background-color: #f9f9f9;
+  }
+  
+  .product-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* Increased font size for titles */
+  }
+  
+  .product-description {
+    font-size: 1rem; /* Increased font size for descriptions */
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .product-item {
+      width: 100%; /* Full width for mobile screens */
+      flex-direction: column; /* Stack items vertically */
+      padding: 15px; /* Adjust padding to prevent overflow */
+    }
+  
+    .product-image {
+      width: 100%; /* Full width for the image on mobile */
+      height: auto; /* Let the image adjust size */
+      margin-bottom: 10px; /* Add some space between image and text */
+    }
+  
+    .product-text {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .product-description {
+      font-size: 1rem; /* Ensure readable font size */
+      line-height: 1.5; /* Improve line spacing */
+    }
+  }
+  
