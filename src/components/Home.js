@@ -46,18 +46,23 @@ const Home = () => {
       <AnimatedBanner />
 
       {/* Welcome Section */}
-      <div style={{ backgroundColor: '#f8f9fa', padding: '40px 20px', textAlign: 'center' }}>
+      <div
+        style={{
+          backgroundColor: '#f8f9fa',
+          padding: '40px 20px',
+          textAlign: 'center',
+        }}
+        data-aos="fade-up"
+      >
         <h1 className="text-primary">Welcome to Clean Water & Allied Products Pvt. Ltd.</h1>
         <p style={{ fontSize: '1.2rem', color: '#555' }}>
           Delivering Purity, Innovation, and Excellence in Every Drop
         </p>
-        <p style={{ fontSize: '1rem', color: '#777', marginTop: '20px' }}>
-          Nestled in the serene landscapes of Nalagarh, Himachal Pradesh, Clean Water & Allied Products Pvt. Ltd. 
-          is a trusted leader in manufacturing packaged drinking water, natural mineral water, and flavored soft drinks. 
-          With a steadfast commitment to quality, safety, and sustainability, we ensure that every product we deliver meets 
-          the highest standards of excellence.
+        <p style={{ fontSize: '1.1rem', color: '#555', lineHeight: '1.6' }}>
+          Nestled in the serene landscapes of Nalagarh, Himachal Pradesh, Clean Water & Allied Products Pvt. Ltd. is a trusted leader in manufacturing packaged drinking water, natural mineral water, and flavored soft drinks. With a steadfast commitment to quality, safety, and sustainability, we ensure that every product we deliver meets the highest standards of excellence.
         </p>
       </div>
+
 
       {/* Products Section */}
       <div style={{ backgroundColor: '#187bb4', padding: '40px 20px' }}>

@@ -79,7 +79,10 @@ const Career = () => {
   return (
     <div className="container mt-5">
       <h2 className="mb-4">Join Our Team</h2>
-      <p className="mb-4">We are always looking for talented individuals. Select a position below and apply!</p>
+      <p className="mb-4">Join Us in Creating a Healthier Tomorrow
+        Whether it’s packaged drinking water, mineral water, or flavored sodas, Clean Water & Allied Products Pvt. Ltd. is your trusted partner for purity, taste, and innovation. Let’s stay refreshed, healthy, and sustainable together.
+        This expanded content highlights your machinery in detail while maintaining a professional tone. Let me know if you’d like further refinements!
+        </p>
 
       {/* Show Thank You Message if the application was submitted */}
       {isSubmitted ? (
