@@ -1,0 +1,11 @@
+{
+    "routes": {
+      "/admin": "/index.html",
+      "/career": "/index.html",
+      "/": "/index.html",
+      "/login": "/index.html",
+      "/products": "/index.html",
+      "/contact": "/index.html"
+    }
+  }
+  
