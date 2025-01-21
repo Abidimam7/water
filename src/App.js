@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <Router>
-      {window.location.pathname !== '/admin' && <Header />}
+      <Header /> {/* Always render the header */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/career" element={<Career />} />
