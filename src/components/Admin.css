@@ -1,0 +1,312 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #343a40;
+    color: #ffffff;
+    position: fixed;
+    transition: transform 0.3s ease; /* Smooth transition for sidebar */
+    transform: translateX(0); /* Show sidebar by default on larger screens */
+}
+
+/* Hide sidebar off-screen on small screens */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%); /* Hide sidebar off-screen */
+    }
+
+    .sidebar.show {
+        transform: translateX(0); /* Show sidebar when toggled */
+    }
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 270px; /* Adjust for sidebar width on larger screens */
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Smooth transition for main content */
+}
+
+/* Show toggle button on small screens */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block; /* Show toggle button */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove margin for main content on small screens */
+    }
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 270px; /* Adjust for sidebar width */
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Smooth transition for main content */
+}
+
+h2, h3 {
+    color: #343a40;
+}
+
+/* Upload Card Styles */
+.upload-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #17a2b8;
+    outline: none;
+}
+
+.upload-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-label {
+    background-color: #17a2b8;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-label:hover {
+    background-color: #138496;
+}
+
+.image-preview {
+    margin-left: 15px;
+}
+
+.preview-img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Products List Styles */
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(25% - 20px); /* 4 items per row with gap */
+    text-align: center;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* List Group Styles */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Modal Styles */
+.modal-header {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.modal-footer .btn {
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1000; /* Ensure it is above other elements */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove margin for main content */
+    }
+
+    .product-card {
+        width: calc(50% - 10px); /* 2 items per row on smaller screens */
+    }
+
+    .upload-card {
+        margin-bottom: 20px;
+    }
+
+    .upload-section {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    .image-preview {
+        margin-left: 0; /* Remove left margin for small screens */
+        margin-top: 10px; /* Add top margin for spacing */
+    }
+
+    .preview-img {
+        width: 80%; /* Adjust preview image size */
+        height: auto;
+    }
+
+    .products-list {
+        flex-direction: column; /* Stack product cards vertically */
+    }
+
+    .product-card {
+        width: 100%; /* Full width for product cards */
+    }
+
+    .list-group-item {
+        flex-direction: column; /* Stack items vertically in list */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .list-group-item button {
+        margin-top: 10px; /* Add margin for button spacing */
+    }
+}
+
+/* Additional Styles for Buttons */
+.btn {
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Smooth Transition for Modal */
+.modal {
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1; /* Ensure modal is fully visible */
+}
+
+.modal.fade {
+    opacity: 0; /* Start with modal hidden */
+}
+
+/* Tooltip Styles */
+.tooltip-inner {
+    background-color: #343a40; /* Dark background for tooltips */
+    color: #ffffff; /* White text for tooltips */
+    border-radius: 5px;
+}
+
+.tooltip-arrow {
+    border-top-color: #343a40; /* Match arrow color with tooltip */
+}
+
+/* Toggle Button Styles */
+.toggle-btn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #343a40;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+/* Show toggle button on small screens */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block; /* Show toggle button */
+    }
+
+    .sidebar {
+        transform: translateX(-100%); /* Hide sidebar off-screen */
+    }
+
+    .sidebar.show {
+        transform: translateX(0); /* Show sidebar */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove margin for main content */
+    }
+}

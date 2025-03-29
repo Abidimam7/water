@@ -23,8 +23,7 @@ const Home = () => {
   // Fetch products from Django API
   const fetchProducts = async () => {
     try {
-      // const response = await axios.get('http://localhost:8000/cms/api/products/');
-      const response = await axios.get('https://waterbackend.onrender.com/cms/api/products/');
+      const response = await axios.get('http://localhost:8000/cms/api/products/');
       setProducts(response.data);
       console.log(response.data); // Debugging: Log the fetched products
     } catch (error) {

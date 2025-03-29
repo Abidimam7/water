@@ -22,16 +22,16 @@ const Founder = () => {
         <div className="row align-items-center">
           <div className="col-md-4 text-center" data-aos="fade-right">
             <img
-              src="/founder.jpg"
+              src="/owner.png"
               alt="Founder"
               className="img-fluid rounded-circle shadow-lg"
               style={{ maxWidth: '250px', marginBottom: '20px' }}
             />
           </div>
           <div className="col-md-8" data-aos="fade-left">
-            <h3 className="text-primary mb-3">Farhat Hussain</h3>
+            <h3 className="text-primary mb-3">Prem Kumar Verma</h3>
             <p className="text-muted" style={{ fontSize: '1.1rem' }}>
-              Our founder, Farhat Hussain, is a visionary leader with a passion for excellence and innovation. With years of experience in the industry,
+              Our founder, Prem Kumar Verma, is a visionary leader with a passion for excellence and innovation. With years of experience in the industry,
               Farhat has been instrumental in shaping the values and vision of Clean Water & Allied Products Pvt. Ltd.
             </p>
             <p className="text-muted" style={{ fontSize: '1.1rem' }}>

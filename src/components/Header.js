@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
-
 const Header = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
@@ -49,10 +48,7 @@ const Header = () => {
           </button>
 
           {/* Navigation Links */}
-          <div
-            className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`}
-            id="navbarNav"
-          >
+          <div className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`} id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <Link to="/" className="nav-link text-white" onClick={handleLinkClick}>
@@ -94,6 +90,11 @@ const Header = () => {
               <li className="nav-item">
                 <Link to="/career" className="nav-link text-white" onClick={handleLinkClick}>
                   Career
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/gallery" className="nav-link text-white" onClick={handleLinkClick}>
+                  Gallery
                 </Link>
               </li>
             </ul>
