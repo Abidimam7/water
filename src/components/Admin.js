@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Tooltip, OverlayTrigger, Modal, Button } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Admin.css';
@@ -14,7 +14,7 @@ const Admin = () => {
   const [careerApplications, setCareerApplications] = useState([]);
   const [jobVacancies, setJobVacancies] = useState([]);
   const [newJob, setNewJob] = useState({ title: '', description: '', requirements: '' });
-  const [showProducts, setShowProducts] = useState(true);
+  const [showProducts] = useState(true);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [itemToDelete, setItemToDelete] = useState(null);
   const [deleteType, setDeleteType] = useState('');
@@ -52,12 +52,12 @@ const Admin = () => {
     }
   };
   // Remove job vacancy
-  const removeJobVacancy = (id) => {
-    axios
-      .delete(`http://localhost:8000/cms/api/job-vacancies/${id}/`)
-      .then(() => setJobVacancies(jobVacancies.filter((job) => job.id !== id)))
-      .catch((error) => console.error('Error removing job vacancy:', error));
-  };
+  // const removeJobVacancy = (id) => {
+  //   axios
+  //     .delete(`http://localhost:8000/cms/api/job-vacancies/${id}/`)
+  //     .then(() => setJobVacancies(jobVacancies.filter((job) => job.id !== id)))
+  //     .catch((error) => console.error('Error removing job vacancy:', error));
+  // };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewProduct((prev) => ({ ...prev, [name]: value }));
