@@ -12,12 +12,21 @@ const Home = () => {
 
   // Static products with images in the public folder
   const staticProducts = [
-    { name: 'Kingfisher Premium', image: '/01.jpg', description: 'Packaged Drinking Water' },
-    { name: 'Kingfisher Strong Soda', image: '/02.jpg', description: 'Kingfisher Strong Soda' },
-    { name: 'Kingfisher Ultra Soda', image: '/03.jpg', description: 'Kingfisher Ultra Soda' },
-    { name: 'Zero Degree ', image: '/04.jpg', description: 'Packaged Drinking Water' },
-    { name: 'Kingfisher Premium', image: '/05.jpg', description: 'Packaged Drinking Water' },
-    { name: 'Kingfisher Ultra Soda', image: '/06.jpg', description: 'Kingfisher Ultra Soda' },
+    { name: 'Kingfisher Premium', image: '/01.jpg', description: 'Pure and safe drinking water from Clean Water & Allied Products Pvt. Ltd. Ideal for hydration on the go, Kingfisher is a trusted choice for quality and freshness.' },
+    { name: 'Kingfisher Strong Power Soda – 600ml', image: '/02.jpg', description: 'Crisp and bold carbonated soda for a refreshing boost, perfect for mixers or enjoying solo.' },
+    { name: 'Kingfisher Ultra Soda', image: '/03.jpg', description: 'A smooth and refreshing soda crafted for premium taste and perfect fizz, ideal for mixing or standalone enjoyment.' },
+    { name: 'Zero Degree Premium Packaged Drinking Water  ', image: '/04.jpg', description: 'Clean and refreshing mineral-enhanced water, crafted for purity and hydration anytime, anywhere.' },
+    { name: 'Himalayan Clean Packaged Drinking Water – 1L ', image: '/12.jpg', description: 'Pure and reliable drinking water sourced with care, offering crisp refreshment in every sip.' },
+    { name: 'Himalayan Clean Packaged Drinking Water -500 ML', image: '/11.jpg', description: 'Pure and reliable drinking water sourced with care, offering crisp refreshment in every sip.' },
+    { name: 'Kingfisher Premium Packaged Drinking Water – 1L', image: '/08.jpg', description: 'Trusted for purity and quality, this 1L bottle offers crisp and refreshing hydration for any time of day.' },
+    { name: 'Kingfisher Premium Packaged Drinking Water – 500ml', image: '09.jpg', description: 'Convenient and pure hydration in a compact 500ml bottle, perfect for travel, work, or school.' },
+    { name: 'Kingfisher Premium Packaged Drinking Water – 2L', image: '/10.jpg', description: 'A larger 2L bottle for family or group hydration, combining purity, quality, and convenience with an easy-carry handle.' },
+    { name: 'Zero Degree Packaged Drinking Water – 500ml ', image: '/13.jpg', description: 'Compact and refreshing, this 500ml bottle offers clean, mineral-enriched hydration wherever you go.' },
+    { name: 'Zero Degree Packaged Drinking Water – 250ml', image: '/14.jpg', description: 'Handy and lightweight, this 250ml bottle delivers clean and crisp water—perfect for single-serve refreshment.' },
+    { name: 'Zero Degree Premium Packaged Drinking Water – 1L', image: '/15.jpg', description: 'Mineral-enriched and pure, this 1L bottle is designed for reliable hydration with a refreshing taste.' },
+    { name: 'Himalayan Clean Packaged Drinking Water – 1L & 250ml', image: '/16.jpg', description: 'Available in both 1L and 250ml sizes, Himalayan Clean delivers crisp, pure water for hydration at home or on the go.' },
+    { name: 'Zero Degree Packaged Drinking Water – 1L, 500ml & 250ml', image: '/17.jpg', description: 'A complete range of Zero Degree drinking water bottles, offering pure hydration in 1L, 500ml, and 250ml sizes for every need.' },
+    { name: 'Himalayan Clean Jeera Soda – 160ml', image: '/40.jpg', description: 'A zesty and refreshing traditional Indian soda infused with jeera (cumin) flavor—perfectly sized for a quick, tangy thirst-quencher' },
   ];
 
   // Fetch products from Django API
@@ -97,7 +106,7 @@ const Home = () => {
                   alt={product.name || `Sample Product ${index + 1}`}
                   className="card-img-top"
                   style={{
-                    height: '300px',
+                    height: '350px',
                     objectFit: 'contain',
                   }}
                 />
